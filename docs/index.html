@@ -116,11 +116,13 @@
 		title.onAdd = function (map) {
 		    this._div = L.DomUtil.create('div', 'info');
 
+		    // Tausta, pyöristetyt kulmat, varjo
 		    this._div.style.setProperty('background', 'rgba(255,255,255,0.90)', 'important');
 		    this._div.style.borderRadius = '10px';
 		    this._div.style.padding = '10px';
 		    this._div.style.boxShadow = '0 2px 6px rgba(0,0,0,0.3)';
 
+		    // Sisältö: kappale näkyvissä aluksi
 		    this._div.innerHTML = `
 		        <h3 style="margin: 0 0 6px 0; font-size: 23px;">
 		            Turku tramline impact on service accessibility
@@ -133,11 +135,12 @@
 		        </button>
 		    `;
 
+		    // Napin toiminnallisuus
 		    var button = this._div.querySelector('#toggleParagraphButton');
 		    var paragraph = this._div.querySelector('#toggleParagraphContent');
 
 		    L.DomEvent.on(button, 'click', function(e) {
-		        L.DomEvent.stopPropagation(e); 
+		        L.DomEvent.stopPropagation(e); // estää kartan drag/touch ongelmat
 		        paragraph.style.display = (paragraph.style.display === 'none') ? 'block' : 'none';
 		    });
 
@@ -261,7 +264,7 @@
       (props
         ? '<div style="margin-bottom:4px;"><b>Area:</b> ' + props.nimi + '</div>' +
           '<div style="margin-bottom:2px;"><b>Basic education only:</b> ' + props.ko_perus + ' %</div>' +
-          '<div style="margin-bottom:2px;"><b>Median income:</b> ' + props.hr_mtu + '</div>' +
+          '<div style="margin-bottom:2px;"><b>Median income:</b> ' + props.hr_mtu + ' €</div>' +
           '<div style="margin-bottom:2px;"><b>Unemployment rate:</b> ' + props.Emplyotyme + ' %</div>' +
           '<div><b>Overall:</b> ' + getIndicatorLabel(props.indicator) + '</div>'
         : '<div>Hover over an area</div>') +
@@ -821,3 +824,4 @@
         </script>
     </body>
 </html>
+
