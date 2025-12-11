@@ -3,6 +3,6 @@
 
 **Emilia Martois, Sanni Hakanpää, Taija Tokko and John Davis.**
 
-The map visualises travel time to health care facilities via different transportation modes. The solution responded to challenge provided by Lounaistieto.
+The map provides an overview of the socio-economic status of different districts in Turku, alongside the planned tramline and its stops. These are visualised with services categorised in themes of cultural services, schools, and sports and wellbeing services. The solution responded to challenge provided by Lounaistieto.
 
 Explore the map: [https://utu-geospatial-labs.github.io/2025-webmap-polar-bears/](https://utu-geospatial-labs.github.io/2025-webmap-polar-bears/)
